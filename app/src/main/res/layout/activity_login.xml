@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <TextView
         android:id="@+id/tvTitle2"
@@ -16,14 +16,14 @@
         android:fontFamily="cursive"
         android:text="Billz"
         android:textColor="#9C27B0"
-        android:textSize="20sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilUsername2"
+        android:id="@+id/tilEmail2"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -34,10 +34,10 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitle2">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tieUsernametwo"
+            android:id="@+id/tieEmail2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="UserName" />
+            android:hint="Email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -49,7 +49,7 @@
         android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilUsername2">
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tiePasswordtwo"

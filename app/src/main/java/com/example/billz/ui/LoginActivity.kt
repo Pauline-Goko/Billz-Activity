@@ -1,11 +1,10 @@
-package com.example.billz
+package com.example.billz.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.billz.databinding.ActivityLoginBinding
-import com.example.billz.databinding.ActivityMainBinding
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
@@ -15,12 +14,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnRegisterthree.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
         binding.btnLogIn.setOnClickListener {
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
         onResume()
@@ -32,12 +31,12 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun validateLogin(){
-    val username = binding.tieUsernametwo.text.toString()
+    val username = binding.tieEmail2.text.toString()
     val password = binding.tiePasswordtwo.text.toString()
         var error = false
 
         if (username.isEmpty()) {
-            binding.tieUsernametwo.error = "Username is required"
+            binding.tieEmail2.error = "Username is required"
             error = true
 
         }
