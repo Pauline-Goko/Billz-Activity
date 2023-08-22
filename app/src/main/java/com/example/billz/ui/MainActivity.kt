@@ -1,5 +1,6 @@
 package com.example.billz.ui
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.billz.model.RegisterRequest
 import com.example.billz.databinding.ActivityMainBinding
+import com.example.billz.utils.Constants
 import com.example.billz.viewmodel.UserViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        redirectUser()
     }
 
     override fun onResume() {
@@ -27,10 +30,10 @@ class MainActivity : AppCompatActivity() {
        }
 
         binding.btnLogIn2.setOnClickListener {
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
-            startActivity(intent)
-
+            val intent2 = Intent(this, LoginActivity::class.java)
+            startActivity(intent2)
         }
+
 
         userViewModel.regLiveData.observe(this, Observer { regResponse ->
             Toast.makeText(this, regResponse.message, Toast.LENGTH_LONG).show()
@@ -106,6 +109,16 @@ class MainActivity : AppCompatActivity() {
 
 
    }
+
+    fun redirectUser(){
+        val sharedPrefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE)
+        val userId = sharedPrefs.getString(Constants.USER_ID, Constants.EMPTY_STRING) ?: Constants.EMPTY_STRING
+        if (userId.isNotBlank()){
+            startActivity(Intent(this, HomeActivity2::class.java))
+            finish()
+        }
+
+    }
 }
 
 

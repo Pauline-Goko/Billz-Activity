@@ -20,12 +20,14 @@ class UserRepository {
             apiClient.registerUser(registerRequest)
         }
     }
-//   val apiclient2 = ApiClient.buildApiClient(ApiInterface::class.java)
-//    suspend fun login(loginRequest: LoginRequest): Response<RegisterResponse> {
-//        return withContext(Dispatchers.IO){
-//            apiClient.loginUser(loginRequest)
-//        }
-//    }
+
+
+    suspend fun login(loginRequest: LoginRequest): Response<LoginResponse> {
+        return withContext(Dispatchers.IO){
+            apiClient.loginUser(loginRequest)
+        }
+    }
+
 
 
 }
