@@ -11,7 +11,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.Response
 
 class Login {
-    suspend fun login(loginRequest: LoginRequest): Any {
+    suspend fun login(loginRequest: LoginRequest): Response<LoginResponse> {
         return withContext(Dispatchers.IO) {
             val apiClient  = ApiClient.buildApiClient(ApiInterface::class.java)
             apiClient.loginUser(loginRequest)
@@ -21,21 +21,5 @@ class Login {
 
     }
 
-//    val apiClient = ApiClient.buildApiClient(ApiInterface::class.java)
 
-//    suspend fun loginUser(loginRequest: LoginRequest): Response<RegisterResponse> {
-//        return withContext(Dispatchers.IO) {
-//            apiClient.loginUser(loginRequest)
-//        }
-//    }
-
-//    companion object {
-//        suspend fun loginUser(loginRequest: LoginRequest) {
-//            return withContext(Dispatchers.IO) {
-//                val apiClient  = ApiClient.buildApiClient(ApiInterface::class.java)
-//                apiClient.loginUser(loginRequest)
-//            }
-//
-//        }
-//    }
 

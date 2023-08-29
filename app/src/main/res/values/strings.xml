@@ -8,4 +8,19 @@
     <string name="settings">Settings</string>
     <string name="summary">Summary</string>
     <string name="Settings" />
+    <string name="add_bill">Add Bill</string>
+    <string name="name">Name</string>
+    <string name="amount">Amount</string>
+    <string name="frequency">Frequency:</string>
+    <string name="due_date">Due Date:</string>
+    <string name="save_bill">Save Bill</string>
+    <string name="paid">Paid</string>
+    <string-array name="frequencies">
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Quarterly</item>
+        <item>Annual</item>
+    </string-array>
+
+
 </resources>

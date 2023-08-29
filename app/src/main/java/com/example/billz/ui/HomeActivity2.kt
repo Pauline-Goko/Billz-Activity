@@ -17,16 +17,6 @@ class HomeActivity2 : AppCompatActivity() {
         binding = ActivityHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val sharedprefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE)
-//        val logoutBtn = findViewById<Button>(R.id.btnLogOut)
-//        logoutBtn.setOnClickListener{
-//            val editor = sharedprefs.edit()
-//            editor.clear()
-//            editor.apply()
-//            val loginActivity = Intent(this@HomeActivity2, LoginActivity::class.java)
-//            startActivity(loginActivity)
-//            finish()
-//        }
 
 
     }
