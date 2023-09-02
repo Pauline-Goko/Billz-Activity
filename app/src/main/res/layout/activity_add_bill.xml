@@ -40,6 +40,7 @@
         android:ems="10"
         android:inputType="text"
         android:text="@string/name"
+        android:fontFamily="@font/signika_negative_regular_ttf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
@@ -70,53 +71,66 @@
         android:id="@+id/tvFrequency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="68dp"
         android:text="@string/frequency"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etAmount" />
 
     <Spinner
         android:id="@+id/spFrequency"
-        android:layout_width="264dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvFrequency"
+        android:layout_width="260dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/spDueDate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvFrequency"
-        app:layout_constraintTop_toTopOf="@+id/tvFrequency"
-        app:layout_constraintVertical_bias="0.368" />
+        app:layout_constraintTop_toBottomOf="@+id/etAmount" />
 
     <TextView
         android:id="@+id/tvDueDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/due_date"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="70dp"
+        android:text="Due Date"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFrequency" />
 
     <Spinner
         android:id="@+id/spDueDate"
-        android:layout_width="264dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="152dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvDueDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_width="252dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="33dp"
         app:layout_constraintStart_toEndOf="@+id/tvDueDate"
-        app:layout_constraintTop_toTopOf="@+id/tvDueDate"
-        app:layout_constraintVertical_bias="0.411" />
+        app:layout_constraintTop_toBottomOf="@+id/spFrequency" />
+
+
+    <DatePicker
+        android:id="@+id/dpDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="28dp"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toEndOf="@id/tvDueDate"
+        tools:layout_editor_absoluteY="255dp" />
 
     <Button
         android:id="@+id/btnsavebill"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="81dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="200dp"
         android:text="@string/save_bill"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spDueDate" />

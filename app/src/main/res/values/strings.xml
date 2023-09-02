@@ -15,6 +15,7 @@
     <string name="due_date">Due Date:</string>
     <string name="save_bill">Save Bill</string>
     <string name="paid">Paid</string>
+    <string name="save">Save</string>
     <string-array name="frequencies">
         <item>Weekly</item>
         <item>Monthly</item>
